@@ -9,4 +9,18 @@ public class MyArrayList<E> implements MyList<E> {
         }
         data[size++] = e; // add element to end of array
     }
+    public void add(int index, E e) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (size == data.length) {
+            resize();
+        }
+        for (int i = size; i > index; i--) {
+            data[i] = data[i - 1];
+        }
+        data[index] = e;
+        size++;
+    }
+
 }
