@@ -49,6 +49,7 @@ public class MyArrayList<E> implements MyList<E> {
         return element;
     }
 
+    // Returns the number of elements in the list
     public int size() {
         return size;
     }
