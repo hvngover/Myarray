@@ -31,5 +31,15 @@ public class MyArrayList<E> implements MyList<E> {
         // Return the element at the specified index
         return data[index];
     }
-
+    public E remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        E element = data[index];
+        for (int i = index; i < size - 1; i++) {
+            data[i] = data[i + 1];
+        }
+        data[--size] = null;
+        return element;
+    }
 }
