@@ -22,4 +22,14 @@ public class MyArrayList<E> implements MyList<E> {
         size++;
     }
 
+    // Return the element at the specified index
+    public E get(int index) {
+        // Check if the index is within bounds
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        // Return the element at the specified index
+        return data[index];
+    }
+
 }
