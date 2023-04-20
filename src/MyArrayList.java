@@ -49,4 +49,8 @@ public class MyArrayList<E> implements MyList<E> {
         return element;
     }
 
+    public int size() {
+        return size;
+    }
+
 }
