@@ -54,4 +54,10 @@ public class MyArrayList<E> implements MyList<E> {
         return size;
     }
 
+    private void resize() {
+        E[] newData = (E[]) new Object[data.length * 2];
+        System.arraycopy(data, 0, newData, 0, data.length);
+        data = newData;
+    }
+}
 }
