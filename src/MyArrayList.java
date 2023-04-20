@@ -3,22 +3,21 @@ public class MyArrayList<E> implements MyList<E> {
     private E[] data = (E[]) new Object[INITIAL_CAPACITY];
     private int size = 0;
 
-    public void add(E e) { // add element to end of array
-        if (size == data.length) { // if array is full, resize it
-            resize();
-        }
-        data[size++] = e; // add element to end of array
-    }
+    // Insert a new element at the specified index
     public void add(int index, E e) {
+        // Check if the index is within bounds
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
+        // If the array is already full, resize it
         if (size == data.length) {
             resize();
         }
+        // Shift all elements to the right of the specified index one position to the right
         for (int i = size; i > index; i--) {
             data[i] = data[i - 1];
         }
+        // Insert the new element at the specified index and increment the size
         data[index] = e;
         size++;
     }
