@@ -11,6 +11,13 @@ public class MyLinkedList<E> implements MyList<E> {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
+        if (index == 0) {
+            head = new Node<>(e, head);
+            size++;
+            return;
+        }
+
+    }
 
 
 }
