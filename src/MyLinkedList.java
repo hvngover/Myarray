@@ -25,5 +25,16 @@ public class MyLinkedList<E> implements MyList<E> {
         size++;
     }
 
+    public E get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node<E> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.data;
+    }
+
 
 }
