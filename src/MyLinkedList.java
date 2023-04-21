@@ -40,4 +40,15 @@ public class MyLinkedList<E> implements MyList<E> {
         return current.data;
     }
 
+    public E remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (index == 0) {
+            E element = head.data;
+            head = head.next;
+            size--;
+            return element;
+        }
+
 }
