@@ -3,8 +3,8 @@ public class MyLinkedList<E> implements MyList<E> {
     private int size; // number of elements in the list
 
     // adds the specified element to the end of the list
-    public void add(E e) {
-        add(size, e);
+    public void add(E element) {
+        add(size, element);
     }
 
     // inserts the specified element at the specified position in the list
@@ -20,8 +20,12 @@ public class MyLinkedList<E> implements MyList<E> {
             size++;
             return;
         }
+        Node<E> current = head;
+        for (int i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
         // Insert the new node after the current node
-        current.next = new Node<>(e, current.next);
+        current.next = new Node<>(element, current.next);
         size++;
     }
 
@@ -84,6 +88,7 @@ public class MyLinkedList<E> implements MyList<E> {
             data = dataItem;
             next = null;
         }
+
         private Node(E dataItem, Node<E> nodeRef) {
 
             data = dataItem;
