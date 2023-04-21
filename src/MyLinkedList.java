@@ -55,5 +55,15 @@ public class MyLinkedList<E> implements MyList<E> {
             return element;
         }
 
+        Node<E> current = head;
+        for (int i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+        E element = current.next.data;
+        current.next = current.next.next;
+        size--;
+        return element;
+    }
+
 
 }
