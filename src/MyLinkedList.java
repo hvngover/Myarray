@@ -67,23 +67,24 @@ public class MyLinkedList<E> implements MyList<E> {
         return element;
     }
 
+    // Get the size of the list
     public int size() {
         return size;
     }
 
+    // Inner class representing a node in the linked list
     private static class Node<E> {
-
+        // The data stored in the node
         private E data;
-
+        // The next node in the list
         private Node<E> next;
 
+        // Constructor for a node with only data
         private Node(E dataItem) {
-
             data = dataItem;
-
             next = null;
-
         }
 
 
+    }
 }
