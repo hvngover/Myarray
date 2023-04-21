@@ -7,11 +7,12 @@ public class MyLinkedList<E> implements MyList<E> {
         add(size, e);
     }
 
+    // inserts the specified element at the specified position in the list
     public void add(int index, E e) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
-        if (index == 0) {
+        if (index == 0) { // inserting at the beginning of the list
             head = new Node<>(e, head);
             size++;
             return;
