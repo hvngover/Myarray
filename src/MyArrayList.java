@@ -3,6 +3,13 @@ public class MyArrayList<E> implements MyList<E> {
     private E[] data = (E[]) new Object[INITIAL_CAPACITY];
     private int size = 0;
 
+    public void add(E e) {
+        if (size == data.length) {
+            resize();
+        }
+        data[size++] = e;
+    }
+
     // Insert a new element at the specified index
     public void add(int index, E e) {
         // Check if the index is within bounds
