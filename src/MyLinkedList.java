@@ -67,5 +67,23 @@ public class MyLinkedList<E> implements MyList<E> {
         return element;
     }
 
+    public int size() {
+        return size;
+    }
+
+    private static class Node<E> {
+
+        private E data;
+
+        private Node<E> next;
+
+        private Node(E dataItem) {
+
+            data = dataItem;
+
+            next = null;
+
+        }
+
 
 }
