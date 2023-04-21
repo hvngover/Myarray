@@ -88,7 +88,7 @@ public class MyLinkedList<E> implements MyList<E> {
             data = dataItem;
             next = null;
         }
-
+        // Constructor for a node with both data and a reference to the next node
         private Node(E dataItem, Node<E> nodeRef) {
 
             data = dataItem;
