@@ -55,10 +55,12 @@ public class MyLinkedList<E> implements MyList<E> {
             return element;
         }
 
+        // Find the node at the index immediately preceding the node to be removed
         Node<E> current = head;
         for (int i = 0; i < index - 1; i++) {
             current = current.next;
         }
+        // Get the data of the node to be removed, and point the previous node to the next node
         E element = current.next.data;
         current.next = current.next.next;
         size--;
