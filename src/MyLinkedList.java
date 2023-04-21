@@ -84,7 +84,12 @@ public class MyLinkedList<E> implements MyList<E> {
             data = dataItem;
             next = null;
         }
+        private Node(E dataItem, Node<E> nodeRef) {
 
+            data = dataItem;
 
+            next = nodeRef;
+
+        }
     }
 }
