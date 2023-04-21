@@ -9,4 +9,5 @@ public interface MyList<E> { // This is the interface for a simple list data str
     E remove(int index);
     // Returns the number of elements in the list
     int size();
+
 }
