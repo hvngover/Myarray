@@ -8,18 +8,18 @@ public class MyLinkedList<E> implements MyList<E> {
     }
 
     // inserts the specified element at the specified position in the list
-    public void add(int index, E e) {
+    public void add(int index, E element) {
+        // Check if index is out of bounds
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
-        if (index == 0) { // inserting at the beginning of the list
-            head = new Node<>(e, head);
+
+        // If adding at beginning of list
+        if (index == 0) {
+            head = new Node<>(element, head);
             size++;
             return;
         }
-        current.next = new Node<>(e, current.next);
-        size++;
-    }
 
 
 }
