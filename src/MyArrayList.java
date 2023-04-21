@@ -54,6 +54,7 @@ public class MyArrayList<E> implements MyList<E> {
         return size;
     }
 
+    // Resize the array by creating a new array with twice the capacity and copying the elements over
     private void resize() {
         E[] newData = (E[]) new Object[data.length * 2];
         System.arraycopy(data, 0, newData, 0, data.length);
