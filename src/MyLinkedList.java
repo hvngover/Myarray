@@ -17,7 +17,8 @@ public class MyLinkedList<E> implements MyList<E> {
             size++;
             return;
         }
-
+        current.next = new Node<>(e, current.next);
+        size++;
     }
 
 
