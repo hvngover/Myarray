@@ -3,10 +3,13 @@ public class MyArrayList<E> implements MyList<E> {
     private E[] data = (E[]) new Object[INITIAL_CAPACITY];
     private int size = 0;
 
+    // Add a new element to the end of the list
     public void add(E e) {
+        // If the array is already full, resize it
         if (size == data.length) {
             resize();
         }
+        // Add the new element and increment the size
         data[size++] = e;
     }
 
