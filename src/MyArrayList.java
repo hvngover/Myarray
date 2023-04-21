@@ -61,4 +61,3 @@ public class MyArrayList<E> implements MyList<E> {
         data = newData;
     }
 }
-}
