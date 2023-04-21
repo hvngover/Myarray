@@ -8,7 +8,6 @@ public class Main { // This is the main class that tests the MyArrayList and MyL
         System.out.println(list.get(1));
         list.remove(1);
         System.out.println(list.get(1));
-
         // Testing MyLinkedList
         list = new MyLinkedList<>();
         list.add(1);
