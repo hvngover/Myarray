@@ -7,4 +7,10 @@ public class MyLinkedList<E> implements MyList<E> {
         add(size, e);
     }
 
+    public void add(int index, E e) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+
+
 }
