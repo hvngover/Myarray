@@ -40,15 +40,20 @@ public class MyLinkedList<E> implements MyList<E> {
         return current.data;
     }
 
+    // Remove the element at a specific index in the list
     public E remove(int index) {
+        // Throw an exception if the index is invalid
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
+        // If removing the first element
         if (index == 0) {
+            // Get the data of the head node, and point the head to the next node
             E element = head.data;
             head = head.next;
             size--;
             return element;
         }
+
 
 }
