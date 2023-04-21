@@ -25,16 +25,19 @@ public class MyLinkedList<E> implements MyList<E> {
         size++;
     }
 
+    // Get the element at a specific index in the list
     public E get(int index) {
+        // Throw an exception if the index is invalid
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
+        // Find the node at the specified index
         Node<E> current = head;
         for (int i = 0; i < index; i++) {
             current = current.next;
         }
+        // Return the data of the node at the specified index
         return current.data;
     }
-
 
 }
