@@ -20,6 +20,7 @@ public class MyLinkedList<E> implements MyList<E> {
             size++;
             return;
         }
+        // Insert the new node after the current node
         current.next = new Node<>(e, current.next);
         size++;
     }
