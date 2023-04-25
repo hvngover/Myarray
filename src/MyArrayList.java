@@ -1,3 +1,4 @@
+modify the code, add new method deldublic to the delete dublicates
 public class MyArrayList<E> implements MyList<E> {
     private static final int INITIAL_CAPACITY = 10;
     private E[] data = (E[]) new Object[INITIAL_CAPACITY];
@@ -41,6 +42,7 @@ public class MyArrayList<E> implements MyList<E> {
         // Return the element at the specified index
         return data[index];
     }
+
     // Remove and return the element at the specified index
     public E remove(int index) {
         // Check if the index is within bounds
@@ -70,4 +72,28 @@ public class MyArrayList<E> implements MyList<E> {
         System.arraycopy(data, 0, newData, 0, data.length);
         data = newData;
     }
+
+    public void deldublic() {
+        E[] uniqueData = (E[]) new Object[data.length];
+        int uniqueSize = 0;
+        for (int i = 0; i < size; i++) {
+            E element = data[i];
+
+            boolean isDuplicate = false;
+            for (int j = 0; j < uniqueSize; j++) {
+                if (uniqueData[j].equals(element)) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (!isDuplicate) {
+                uniqueData[uniqueSize++] = element;
+            }
+        }
+
+        data = uniqueData;
+        size = uniqueSize;
+    }
+
 }

@@ -1,3 +1,4 @@
+
 public class MyLinkedList<E> implements MyList<E> {
     private Node<E> head; // reference to the first node in the list
     private int size; // number of elements in the list
@@ -97,4 +98,30 @@ public class MyLinkedList<E> implements MyList<E> {
 
         }
     }
+
+    public void deldublic() {
+        if (head == null) {
+            return;
+        }
+
+
+        Set<E> uniqueElements = new HashSet<>();
+
+        Node<E> previous = head;
+        Node<E> current = head.next;
+        uniqueElements.add(previous.data);
+        while (current != null) {
+            if (uniqueElements.contains(current.data)) {
+               t
+                previous.next = current.next;
+                size--;
+            } else {
+                uniqueElements.add(current.data);
+                previous = current;
+            }
+            current = current.next;
+        }
+    }
+
+
 }
