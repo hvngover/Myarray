@@ -16,4 +16,5 @@ public interface MyList<E> {
 
     // Deletes duplicates from the list
     void delete_duplicates();
+
 }
