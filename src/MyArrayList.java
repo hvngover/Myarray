@@ -1,4 +1,6 @@
-modify the code, add new method deldublic to the delete dublicates
+import java.util.HashSet;
+import java.util.Set;
+
 public class MyArrayList<E> implements MyList<E> {
     private static final int INITIAL_CAPACITY = 10;
     private E[] data = (E[]) new Object[INITIAL_CAPACITY];
@@ -73,27 +75,20 @@ public class MyArrayList<E> implements MyList<E> {
         data = newData;
     }
 
-    public void deldublic() {
-        E[] uniqueData = (E[]) new Object[data.length];
-        int uniqueSize = 0;
+    // Delete duplicates from the array list
+    public void delete_duplicates() {
+        // Create a set to keep track of unique elements
+        Set<E> uniqueElements = new HashSet<>();
         for (int i = 0; i < size; i++) {
-            E element = data[i];
-
-            boolean isDuplicate = false;
-            for (int j = 0; j < uniqueSize; j++) {
-                if (uniqueData[j].equals(element)) {
-                    isDuplicate = true;
-                    break;
-                }
-            }
-
-            if (!isDuplicate) {
-                uniqueData[uniqueSize++] = element;
+            E element = get(i);
+            if (uniqueElements.contains(element)) {
+                // If the element is a duplicate, remove it from the list
+                remove(i);
+                i--; // decrement i to recheck the current index
+            } else {
+                // If the element is not a duplicate, add it to the set of unique elements
+                uniqueElements.add(element);
             }
         }
-
-        data = uniqueData;
-        size = uniqueSize;
     }
-
 }

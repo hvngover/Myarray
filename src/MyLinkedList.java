@@ -99,29 +99,23 @@ public class MyLinkedList<E> implements MyList<E> {
         }
     }
 
-    public void deldublic() {
-        if (head == null) {
-            return;
-        }
-
-
-        Set<E> uniqueElements = new HashSet<>();
-
-        Node<E> previous = head;
-        Node<E> current = head.next;
-        uniqueElements.add(previous.data);
+    // Method to delete duplicates in the list
+    public void delete_duplicates() {
+        Node<E> current = head;
         while (current != null) {
-            if (uniqueElements.contains(current.data)) {
-               t
-                previous.next = current.next;
-                size--;
-            } else {
-                uniqueElements.add(current.data);
-                previous = current;
+            // Check if the current node's data is equal to the data of any subsequent nodes
+            Node<E> runner = current;
+            while (runner.next != null) {
+                if (current.data.equals(runner.next.data)) {
+                    // If a duplicate is found, remove the subsequent node
+                    runner.next = runner.next.next;
+                    size--;
+                } else {
+                    runner = runner.next;
+                }
             }
             current = current.next;
         }
     }
-
 
 }
