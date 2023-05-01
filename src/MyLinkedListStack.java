@@ -22,4 +22,10 @@ public class MyLinkedListStack<E> implements MyStack<E> {
         return stack.removeFirst();
     }
 
+    public boolean isEmpty() {
+        return stack.isEmpty();
+    }
+
+
+
 }
