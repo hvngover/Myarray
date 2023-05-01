@@ -29,10 +29,10 @@ public class MyArrayListQueue<E> implements MyQueue<E> {
         return queue.get(0);
     }
 
+    // Returns true if the queue is empty, false otherwise
     public boolean isEmpty() {
         return queue.isEmpty();
     }
-
 
 
 }
