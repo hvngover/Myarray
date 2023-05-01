@@ -34,5 +34,8 @@ public class MyArrayListQueue<E> implements MyQueue<E> {
         return queue.isEmpty();
     }
 
+    public int size() {
+        return queue.size();
+    }
 
 }
