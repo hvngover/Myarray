@@ -13,4 +13,12 @@ public class MyLinkedListStack<E> implements MyStack<E> {
         stack.addFirst(e);
     }
 
+
+    public E pop() throws EmptyStackException {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stack.removeFirst();
+    }
+
 }
