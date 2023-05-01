@@ -14,10 +14,11 @@ public class MyLinkedListStack<E> implements MyStack<E> {
     }
 
 
+// Throws an exception if the stack is empty
     public E pop() throws EmptyStackException {
         if (isEmpty()) {
             throw new EmptyStackException();
-        }
+        }  // Removes and returns the element at the top of the stack
         return stack.removeFirst();
     }
 
