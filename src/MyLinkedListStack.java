@@ -28,5 +28,7 @@ public class MyLinkedListStack<E> implements MyStack<E> {
     }
 
 
-
+    public int size() {
+        return stack.size();
+    }
 }
