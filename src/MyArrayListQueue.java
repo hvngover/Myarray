@@ -13,11 +13,19 @@ public class MyArrayListQueue<E> implements MyQueue<E> {
         queue.add(e);
     }
 
+    // Throws NoSuchElementException if the queue is empty
     public E dequeue() throws NoSuchElementException {
         if (isEmpty()) {
             throw new NoSuchElementException();
-        }
+        }  // Removes and returns the element at the front of the queue
         return queue.remove(0);
+    }
+
+    public E peek() throws NoSuchElementException {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return queue.get(0);
     }
 
 
