@@ -22,6 +22,14 @@ public class MyLinkedListStack<E> implements MyStack<E> {
         return stack.removeFirst();
     }
 
+    public E peek() throws EmptyStackException {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stack.getFirst();
+    }
+
+
     // Returns true if the stack is empty, false otherwise
     public boolean isEmpty() {
         return stack.isEmpty();
