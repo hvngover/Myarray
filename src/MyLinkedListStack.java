@@ -27,7 +27,7 @@ public class MyLinkedListStack<E> implements MyStack<E> {
         return stack.isEmpty();
     }
 
-
+    // Returns the number of elements in the stack
     public int size() {
         return stack.size();
     }
