@@ -8,7 +8,7 @@ public class MyLinkedListStack<E> implements MyStack<E> {
     public MyLinkedListStack() {
         stack = new LinkedList<>();
     }
-
+    // Adds an element to the top of the stack
     public void push(E e) {
         stack.addFirst(e);
     }
