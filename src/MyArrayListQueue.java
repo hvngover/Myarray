@@ -29,6 +29,9 @@ public class MyArrayListQueue<E> implements MyQueue<E> {
         return queue.get(0);
     }
 
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
 
 
 
