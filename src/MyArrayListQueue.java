@@ -8,6 +8,9 @@ public class MyArrayListQueue<E> implements MyQueue<E> {
         queue = new MyArrayList<>();
     }
 
+    public void enqueue(E e) {
+        queue.add(e);
+    }
 
 
 
