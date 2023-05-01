@@ -9,4 +9,8 @@ public class MyLinkedListStack<E> implements MyStack<E> {
         stack = new LinkedList<>();
     }
 
+    public void push(E e) {
+        stack.addFirst(e);
+    }
+
 }
