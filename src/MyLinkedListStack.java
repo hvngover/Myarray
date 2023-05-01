@@ -22,11 +22,12 @@ public class MyLinkedListStack<E> implements MyStack<E> {
         return stack.removeFirst();
     }
 
+// Throws an exception if the stack is empty
     public E peek() throws EmptyStackException {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return stack.getFirst();
+        return stack.getFirst(); // Returns the element at the top of the stack without removing it
     }
 
 
